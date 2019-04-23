@@ -113,7 +113,6 @@ public class UserControllerTest {
 
     @Test
     public void testSignup() throws Exception{
-        System.out.println(System.getenv("clientSecret"));
         int givenId = 2;
         User user = new User();
         user.setId(givenId);

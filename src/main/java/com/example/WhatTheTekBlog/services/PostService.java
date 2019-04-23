@@ -38,10 +38,11 @@ public class PostService {
     }
 
     public Post updatePost(Long postId, Post post) {
-        Post originalPost = postRepository.findByPostID(postId);
+        Post originalPost = postRepository.findById(postId).get();
         originalPost.setPostTitle(post.getPostTitle());
         originalPost.setPostSummary(post.getPostSummary());
         originalPost.setPostContent(post.getPostContent());
+        originalPost.setMyFile(post.getMyFile());
         removeTags(originalPost);
         originalPost.setTagsSet(saveTags(post));
         postRepository.deleteById(originalPost.getPostID());
@@ -49,12 +50,12 @@ public class PostService {
     }
 
     public Boolean delete(Long postId) {
-        postRepository.delete(postRepository.findByPostID(postId));
+        postRepository.deleteById(postId);
         return true;
     }
 
     public Set<Tags> getTags(Long postId) {
-        return postRepository.existsById(postId) ? new HashSet<>(postRepository.findByPostID(postId).getTagsSet()) : null;
+        return postRepository.existsById(postId) ? new HashSet<>(postRepository.findById(postId).get().getTagsSet()) : null;
     }
 
 
