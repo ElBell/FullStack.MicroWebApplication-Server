@@ -1,0 +1,9 @@
+com/example/WhatTheTekBlog/controllers/PostControllerTest.class
+com/example/WhatTheTekBlog/controllers/BlogUserControllerTest.class
+com/example/WhatTheTekBlog/services/PostServiceTest.class
+com/example/WhatTheTekBlog/models/BlogUserTest.class
+com/example/WhatTheTekBlog/models/PostTest.class
+com/example/WhatTheTekBlog/WhatTheTekBlogApplicationTests.class
+com/example/WhatTheTekBlog/models/CommentsTest.class
+com/example/WhatTheTekBlog/services/BlogUserServiceTest.class
+com/example/WhatTheTekBlog/services/CommentsServiceTest.class

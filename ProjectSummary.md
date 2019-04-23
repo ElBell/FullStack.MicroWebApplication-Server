@@ -1,5 +1,5 @@
 ### WhatTheTek - Web Blog Application:
-* **Objective** - WhatTheTek is a Blog application where multiple users can posts articles and usefull information helping the programmers community to stay abreast with latest technologies best coding practices and News Links.
+* **Objective** - WhatTheTek is a Blog application where multiple blogUsers can posts articles and usefull information helping the programmers community to stay abreast with latest technologies best coding practices and News Links.
 
 ### Tech Stack Used:
 * **Frontend** - React, NodeJs
