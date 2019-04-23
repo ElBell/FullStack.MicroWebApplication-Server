@@ -84,7 +84,7 @@ public class WhatTheTekBlogApplication {
 
 		List<Post> posts = new ArrayList<>();
 		List<Comments> comments = new ArrayList<>();
-		for (int j = 0; j < 60; j++) {
+		for (int j = 0; j < 20; j++) {
 			Post post = new Post();
 			post.setCreator(users.get(random.nextInt(users.size()-1)));
 			post.setPostTitle(RandomGenerator.generateWord());

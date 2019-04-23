@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: com.example.WhatTheTekBlog.services.BlogUserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 1,338.551 s <<< FAILURE! - in com.example.WhatTheTekBlog.services.BlogUserServiceTest
+testgetPostsByUser2(com.example.WhatTheTekBlog.services.BlogUserServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.transaction.TransactionSystemException: Could not roll back JPA transaction; nested exception is org.hibernate.TransactionException: Unable to rollback against JDBC Connection
+Caused by: org.hibernate.TransactionException: Unable to rollback against JDBC Connection
+Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+
+testUpdateService(com.example.WhatTheTekBlog.services.BlogUserServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+Caused by: org.postgresql.util.PSQLException: 
+ERROR: relation "post" does not exist
+  Position: 465
+
+testFindByName(com.example.WhatTheTekBlog.services.BlogUserServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+Caused by: org.postgresql.util.PSQLException: 
+ERROR: relation "blog_user" does not exist
+  Position: 544
+
