@@ -18,6 +18,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.*;
 
@@ -31,6 +34,16 @@ public class WhatTheTekBlogApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WhatTheTekBlogApplication.class, args);
+	}
+
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurerAdapter() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("https://whatthetek-client.herokuapp.com");
+			}
+		};
 	}
 
 	@Autowired
