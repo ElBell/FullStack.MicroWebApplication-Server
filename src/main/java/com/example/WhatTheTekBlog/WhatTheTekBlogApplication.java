@@ -64,7 +64,7 @@ public class WhatTheTekBlogApplication {
 		return tags.get(random.nextInt(tags.size()));
 	}
 
-	@EventListener
+	//@EventListener
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		List<User> users = new ArrayList<>();
 		for (String tag : tags) {
