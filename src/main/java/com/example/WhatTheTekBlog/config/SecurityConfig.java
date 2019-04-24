@@ -64,7 +64,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("*"));
+        configuration.setAllowedOrigins(Arrays.asList("https://whatthetek-client.herokuapp.com/", "http://localhost:4200/"));
         configuration.setAllowedMethods(Arrays.asList("*"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Access-Control-Allow-Headers", "Content-Type", "X-Requested-With", "Content-Type", "Origin", "Accept", "Client-Security-Token", "Accept-Encoding"));
         configuration.setAllowCredentials(true);
